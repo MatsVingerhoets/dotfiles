@@ -6,13 +6,18 @@ export ZSH="/Users/matsvingerhoets/.oh-my-zsh"
 export PROJECT_FOLDER=~/Documents/projects
 export ANDROID_SDK=/Users/matsvingerhoets/Library/Android/sdk
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-export PATH=/Users/matsvingerhoets/Library/Android/sdk/platform-tools:$PATH
-
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+alias psql="psql -U postgres -h localhost -p 5432"
+alias createdb="createdb -U postgres -h localhost -p 5432"
+alias createuser="createuser -U postgres -h localhost -p 5432"
+alias dropdb="dropdb -U postgres -h localhost -p 5432"
+alias pg_dump="pg_dump -U postgres -h localhost -p 5432"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="avit"
+ZSH_THEME="eastwood"
 
 # FZF options
 # fshow - git commit browser
@@ -139,6 +144,7 @@ alias ga="git add ."
 alias gpf="git push --force-with-lease"
 alias gp="git push"
 alias gcm='git commit --message'
+alias gcam='git commit --amend'
 alias gch='git checkout'
 alias gchm='git checkout main'
 alias gchb='git checkout -b'
