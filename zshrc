@@ -8,6 +8,8 @@ export ANDROID_SDK=/Users/matsvingerhoets/Library/Android/sdk
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/Users/matsvingerhoets/Library/Application Support/neovim/bin:$PATH"
+
 alias psql="psql -U postgres -h localhost -p 5432"
 alias createdb="createdb -U postgres -h localhost -p 5432"
 alias createuser="createuser -U postgres -h localhost -p 5432"
@@ -169,3 +171,4 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
 " --color=bg+:$nord1_term,bg:$nord0_term,spinner:$nord9_term,hl:$nord3_term"\
 " --color=fg:$nord5_term,header:$nord8_term,info:$nord10_term,pointer:$nord9_term"\
 " --color=marker:$nord9_term,fg+:$nord6_term,prompt:$nord9_term,hl+:$nord9_term"
+alias python=/usr/bin/python3
