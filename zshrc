@@ -21,10 +21,6 @@ export PATH="/opt/nvim/bin:$PATH"
 # Set theme and other settings for Oh My Zsh
 ZSH_THEME="eastwood"
 
-# FZF options and other aliases
-source $ZSH/oh-my-zsh.sh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Users/matsvingerhoets/Library/Application Support/neovim/bin:$PATH"
@@ -132,8 +128,6 @@ plugins=(
     zsh-autosuggestions 
 )
 
-
-source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # User configuration
 
