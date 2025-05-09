@@ -13,11 +13,11 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export PROJECT_FOLDER=~/Documents/projects
 
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Add other necessary paths (in devcontainer or macOS)
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Documents/nvim-macos/bin:$PATH"
 export PATH="/opt/nvim/bin:$PATH"
-
 # Set theme and other settings for Oh My Zsh
 ZSH_THEME="eastwood"
 
@@ -128,7 +128,6 @@ plugins=(
     zsh-autosuggestions 
 )
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
