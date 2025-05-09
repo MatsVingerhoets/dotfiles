@@ -1,22 +1,36 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+# Check for macOS environment
+if [[ "$(uname)" == "Darwin" ]]; then
+  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+  export ANDROID_SDK=/Users/matsvingerhoets/Library/Android/sdk
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export PROJECT_FOLDER=~/Documents/projects
-export ANDROID_SDK=/Users/matsvingerhoets/Library/Android/sdk
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+
+# Add other necessary paths (in devcontainer or macOS)
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/Documents/nvim-macos/bin:$PATH"
+export PATH="/opt/nvim/bin:$PATH"
+
+# Set theme and other settings for Oh My Zsh
+ZSH_THEME="eastwood"
+
+# FZF options and other aliases
+source $ZSH/oh-my-zsh.sh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Users/matsvingerhoets/Library/Application Support/neovim/bin:$PATH"
 export PATH="$HOME/Documents/nvim-macos/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
-export PATH=/opt/homebrew/bin:$PATH
 export PATH="$HOME/.config/nvim:$PATH"
-export PATH="$HOME/.nvm/versions/node/v20.12.0/bin:$PATH"
-
-source $(brew --prefix nvm)/nvm.sh
 
 alias psql="psql -U postgres -h localhost -p 5432"
 alias createdb="createdb -U postgres -h localhost -p 5432"
@@ -181,4 +195,3 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
 " --color=marker:$nord9_term,fg+:$nord6_term,prompt:$nord9_term,hl+:$nord9_term"
 alias python=/usr/bin/python3
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
