@@ -2,28 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export PROJECT_FOLDER=~/Documents/projects
 export ANDROID_SDK=/Users/matsvingerhoets/Library/Android/sdk
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Users/matsvingerhoets/Library/Application Support/neovim/bin:$PATH"
+export PATH="$HOME/Documents/nvim-macos/bin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 export PATH=/opt/homebrew/bin:$PATH
-export PATH=/Users/matsvingerhoets/.config/nvim:$PATH
+export PATH="$HOME/.config/nvim:$PATH"
 export PATH="$HOME/.nvm/versions/node/v20.12.0/bin:$PATH"
-
-# Detect the operating system
-if [[ "$(uname)" == "Darwin" ]]; then
-  # macOS-specific settings
-  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-  export PATH="/Users/matsvingerhoets/.oh-my-zsh:$PATH"
-  export PATH="/Users/matsvingerhoets/Documents/nvim-macos/bin:$PATH"
-else
-  # Linux-specific settings (for your devcontainer)
-  export PATH="/opt/nvim/bin:$PATH"
-  # other Linux specific paths can be added here
-fi
 
 source $(brew --prefix nvm)/nvm.sh
 
