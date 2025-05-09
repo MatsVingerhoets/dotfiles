@@ -17,8 +17,11 @@ export PROJECT_FOLDER=~/Documents/projects
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Documents/nvim-macos/bin:$PATH"
 export PATH="/opt/nvim/bin:$PATH"
+
 # Set theme and other settings for Oh My Zsh
 ZSH_THEME="eastwood"
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -63,7 +66,6 @@ plugins=(
     git 
     fzf  
 )
-
 
 # zsh aliases
 alias zshconfig="code . ~/.zshrc"
