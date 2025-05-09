@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="zshrc oh-my-zsh alacritty gitconfig"    # list of files/folders to symlink in homedir
+files="zshrc alacritty gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 

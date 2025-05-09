@@ -2,13 +2,30 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/matsvingerhoets/.oh-my-zsh"
+export PATH=/opt/homebrew/bin:$PATH
 export PROJECT_FOLDER=~/Documents/projects
 export ANDROID_SDK=/Users/matsvingerhoets/Library/Android/sdk
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Users/matsvingerhoets/Library/Application Support/neovim/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
+export PATH=/opt/homebrew/bin:$PATH
+export PATH=/Users/matsvingerhoets/.config/nvim:$PATH
+export PATH="$HOME/.nvm/versions/node/v20.12.0/bin:$PATH"
+
+# Detect the operating system
+if [[ "$(uname)" == "Darwin" ]]; then
+  # macOS-specific settings
+  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
+  export PATH="/Users/matsvingerhoets/.oh-my-zsh:$PATH"
+  export PATH="/Users/matsvingerhoets/Documents/nvim-macos/bin:$PATH"
+else
+  # Linux-specific settings (for your devcontainer)
+  export PATH="/opt/nvim/bin:$PATH"
+  # other Linux specific paths can be added here
+fi
+
+source $(brew --prefix nvm)/nvm.sh
 
 alias psql="psql -U postgres -h localhost -p 5432"
 alias createdb="createdb -U postgres -h localhost -p 5432"
@@ -112,7 +129,7 @@ plugins=(
 
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -172,3 +189,5 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
 " --color=fg:$nord5_term,header:$nord8_term,info:$nord10_term,pointer:$nord9_term"\
 " --color=marker:$nord9_term,fg+:$nord6_term,prompt:$nord9_term,hl+:$nord9_term"
 alias python=/usr/bin/python3
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

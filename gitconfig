@@ -4,8 +4,9 @@
 [core]
 	editor = nvim
   pager = delta
+	excludesfile = /Users/matsvingerhoets/.gitignore
 [http]
-	sslbackend = schannel
+	sslbackend = secure-transport
 [interactive]
     diffFilter = delta --color-only --features=interactive
 [delta]
