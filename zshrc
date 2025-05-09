@@ -12,9 +12,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=/opt/homebrew/bin:$PATH
 export PROJECT_FOLDER=~/Documents/projects
-if [[ -d "$HOME/.zsh/zsh-autosuggestions" ]]; then
-  source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
+
 # Add other necessary paths (in devcontainer or macOS)
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/Documents/nvim-macos/bin:$PATH"
@@ -61,13 +59,11 @@ function fzf_gitbranches() {
 zle -N fzf_gitbranches
 bindkey "^y" fzf_gitbranches
 
-# Initialize plugins array
-plugins=(git fzf)
+plugins=(
+    git 
+    fzf  
+)
 
-# Check if zsh-autosuggestions exists and add it to plugins if available
-if [[ -d "$HOME/.zsh/zsh-autosuggestions" ]]; then
-  plugins+=(zsh-autosuggestions)
-fi
 
 # zsh aliases
 alias zshconfig="code . ~/.zshrc"
